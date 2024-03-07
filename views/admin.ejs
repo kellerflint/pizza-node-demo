@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page - Pizza Orders</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            align-items: center;
+            padding: 10px;
+            margin: 0 auto 10px;
+            /* Adjusted margin */
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+<h1>Pizza Orders</h1>
+<% if (orders.length > 0) { %>
+    <% orders.forEach(order => { %>
+        <div class="order-item">
+            <div>
+                Size: <%= order.size %>,
+                Toppings: <%= order.toppings %>,
+                Crust: <%= order.crust %>
+            </div>
+        </div>
+    <% }) %>
+<% } else { %>
+    <p>No orders found.</p>
+<% } %>
+</body>
+
+</html>

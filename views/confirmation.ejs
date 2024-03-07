@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            color: #444;
+        }
+
+        div {
+            background: #fff;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <h1>Your Pizza Order</h1>
+    <p>Size: <%= order.size %>
+    </p>
+    <p>Toppings: <%= order.toppings %>
+    </p>
+    <p>Crust: <%= order.crust %>
+    </p>
+    <h2>Thank you for your order!</h2>
+</div>
+</body>
+
+</html>

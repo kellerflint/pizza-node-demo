@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customize Your Pizza</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        form {
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        select,
+        input[type="text"] {
+            margin-bottom: 20px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #e9e9e9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        br {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Order Your Custom Pizza</h1>
+<form action="/submit-order" method="POST">
+    <label for="size">Size:</label>
+    <select name="size" id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+    </select>
+    <br>
+    <label for="toppings">Toppings:</label>
+    <input type="text" id="toppings" name="toppings" placeholder="e.g., mushrooms, pepperoni">
+    <br>
+    <label for="crust">Crust:</label>
+    <select name="crust" id="crust">
+        <option value="regular">Regular</option>
+        <option value="thin">Thin</option>
+        <option value="deep">Deep Dish</option>
+    </select>
+    <br>
+    <button type="submit">Place Order</button>
+</form>
+</body>
+
+</html>
