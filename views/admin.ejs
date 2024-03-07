@@ -35,19 +35,7 @@
 
 <body>
 <h1>Pizza Orders</h1>
-<% if (orders.length > 0) { %>
-    <% orders.forEach(order => { %>
-        <div class="order-item">
-            <div>
-                Size: <%= order.size %>,
-                Toppings: <%= order.toppings %>,
-                Crust: <%= order.crust %>
-            </div>
-        </div>
-    <% }) %>
-<% } else { %>
-    <p>No orders found.</p>
-<% } %>
+
 </body>
 
 </html>
